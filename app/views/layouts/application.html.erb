@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suggestotron</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_pack_tag 'application'%>
+  <%= javascript_pack_tag 'application'%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% flash.each do |name, msg| %>
+    <div id="notice"><%= msg %></div>
+  <% end %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'solano'
+require 'solano/cli'
+require 'optparse'
+require_relative '../lib/solano/commands/status_plus'
+
+options = {}
+
+optparse = OptionParser.new do|opts|
+  opts.banner = 'Usage: ./solano-plus [OPTIONS]'
+
+  opts.on( '-l', '--limit LIMIT', Integer, 'Limit sessions count. Default: 1' ) do |limit|
+    options[:limit] = limit
+  end
+
+  opts.on( '-b', '--branch BRANCH', String, 'Get status from specific branch. Default: Current branch' ) do |branch|
+    options[:branch] = branch
+  end
+
+  opts.on(
+     '-s',
+    '--status STATUS',
+    String,
+    'Limit sessions status. Default: failed. Options: [all, passed, failed, error, pending, skipped]'
+  ) do |status|
+    options[:status] = status
+  end
+
+  opts.on( '-h', '--help', [], 'Display this screen' ) do
+    puts opts
+    exit
+  end
+end.parse!
+
+
+Solano::SolanoCli.new.status_plus(options)

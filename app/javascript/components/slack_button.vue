@@ -1,0 +1,32 @@
+<style scoped>
+  .auth_submit {
+    background: #05869B;
+    border-radius: 30px;
+    color: #FFF;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s background;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+  }
+
+  .auth__submit__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .st0{fill:#FFFFFF;}
+</style>
+
+<template>
+  <a class="auth_submit" href="/auth/slack">
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 270 270" class="auth__submit__icon">
+      <g id="Layer_2"><title>Logo do Slack</title><path class="st0" d="M126.254 130.53l16.69-5.59 5.398 16.12-16.688 5.59z"></path><path class="st0" d="M126.254 130.53l16.69-5.59 5.398 16.12-16.688 5.59z"></path><path class="st0" d="M194.6 118.5c-12.9-43-31.5-53-74.5-40.1s-53 31.5-40.1 74.5 31.5 53 74.5 40.1 53-31.5 40.1-74.5zm-21.7 27.9l-8.1 2.7 2.8 8.4c1.1 3.4-.7 7.1-4.1 8.2-.7.2-1.5.4-2.2.3-2.6-.1-5.1-1.8-6-4.4l-2.8-8.4-16.7 5.6 2.8 8.4c1.1 3.4-.7 7.1-4.1 8.2-.7.2-1.5.4-2.2.3-2.6-.1-5.1-1.8-6-4.4l-2.8-8.4-8.1 2.7c-.7.2-1.5.4-2.2.3-2.6-.1-5.1-1.8-6-4.4-1.1-3.4.7-7.1 4.1-8.2l8.1-2.7-5.4-16.1-8.1 2.7c-.7.2-1.5.4-2.2.3-2.6-.1-5.1-1.8-6-4.4-1.1-3.4.7-7.1 4.1-8.2l8.1-2.7-2.8-8.4c-1.1-3.4.7-7.1 4.1-8.2s7.1.7 8.2 4.1l2.8 8.4 16.7-5.6-2.8-8.4c-1.1-3.4.7-7.1 4.1-8.2 3.4-1.1 7.1.7 8.2 4.1l2.8 8.4 8.1-2.7c3.4-1.1 7.1.7 8.2 4.1 1.1 3.4-.7 7.1-4.1 8.2l-8.1 2.7 5.4 16.1 8.1-2.7c3.4-1.1 7.1.7 8.2 4.1 1.1 3.4-.7 7.1-4.1 8.2z"></path></g>
+    </svg>
+    acessar usando slack 
+  </a>
+</template>

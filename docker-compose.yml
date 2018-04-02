@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  quero-votar:
+    container_name: quero_votar
+    image: quero_votar:latest
+    volumes:
+      - ./volumes/bundle:/usr/local/bundle
+      - .:/myapp
+    ports:
+      - 3000:3000
+    command: "/bin/sh -c 'while true; do sleep 60; done'"
+  quero-votar-nginx:
+    image: nginx
+    ports:
+      - 8000:80
+    volumes:
+      - .:/myapp
+      - ./docker/nginx_conf.d:/etc/nginx/conf.d
+    links:
+      - quero-votar:app

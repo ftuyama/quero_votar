@@ -28,6 +28,10 @@ COPY . /myapp
 
 RUN yarn install
 RUN rake assets:precompile
-RUN whenever --update-crontab 'quero-votar' --roles app_master
+#RUN whenever --update-crontab 'quero-votar' --roles app_master
+
+RUN apt-get install -y locales
+RUN echo en_US.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen en_US.UTF-8
+ENV LANG=en_US.UTF-8
 
 EXPOSE 3000

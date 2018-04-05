@@ -3,6 +3,10 @@
 **Clone the project**
 `git clone`
 
+**You can either use docker (or not)**
+* `source dev.sh`
+* follow instructions
+
 **Install dependencies**
 * `bundle install`
 * `yarn install`

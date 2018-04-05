@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require websocket_rails/main
+
+window.websocket = new WebSocketRails('0.0.0.0:3000/websocket');

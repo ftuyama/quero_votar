@@ -6,9 +6,13 @@ gem 'rails'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'pry-rails'
 gem 'webpacker'
 gem 'foreman'
+gem 'websocket-rails'
+
+group :development, :test do
+  gem 'pry-rails'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -5,7 +5,7 @@
     components: {
       'issue-list': IssueList,
     },
-    data: function () {
+    data() {
       return {
         message: "Bem vindo ao Quero Votar!"
       }

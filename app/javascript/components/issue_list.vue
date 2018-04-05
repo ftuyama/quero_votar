@@ -2,6 +2,7 @@
   export default {
     data() {
       return {
+        newData: this.fetchData(),
         tableData: [{
           date: '2016-05-03',
           name: 'Tom',
@@ -20,6 +21,16 @@
           address: 'No. 189, Grove St, Los Angeles'
         }]
       }
+    },
+    methods: {
+      fetchData() {
+        websocket.trigger('topic.list', {}, function(data) {
+          console.log('successfully created ' + JSON.stringify(data));
+          console.log(JSON.stringify(this.tableData));
+          this.tableData = data;
+          console.log(JSON.stringify(this.tableData));
+        });
+      }
     }
   }
 </script>
@@ -29,7 +40,7 @@
     :data="tableData"
     style="width: 100%">
     <el-table-column
-      prop="date"
+      prop="created_at"
       label="Date"
       width="180">
     </el-table-column>
@@ -39,7 +50,7 @@
       width="180">
     </el-table-column>
     <el-table-column
-      prop="address"
+      prop="description"
       label="Address">
     </el-table-column>
   </el-table>
